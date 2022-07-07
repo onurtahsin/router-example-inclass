@@ -21,15 +21,38 @@ function Nav() {
             <li className="nav-item">
               {/* prop.isActive yazarsak sadece parantez içinde ama direkt kullanmak istiyorsak  ({isActive}) bu şekilde */}
               <NavLink style={({isActive})=> ({color: isActive && '#ff7f00'})} to="/" className="nav-link active" aria-current="page">
-                Home
+              Home
               </NavLink>
             </li>
 
-            <NavLink style={({isActive})=> ({color: isActive && '#ff7f00'})} to="/instructors" className="nav-link">
-              Instructors
-            </NavLink>
             <li className="nav-item">
-              <NavLink style={({isActive})=> ({color: isActive && '#ff7f00'})} to="/contact" className="nav-link">
+              <NavLink
+                style={({ isActive }) => ({ color: isActive && '#ff7f00' })}
+                to="/instructors"
+                className="nav-link"
+                aria-current="page"
+              >
+                Instructors
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                style={({ isActive }) => ({ color: isActive && '#ff7f00' })}
+                to="/paths"
+                className="nav-link"
+                aria-current="page"
+              >
+                Paths
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                style={({ isActive }) => ({ color: isActive && '#ff7f00' })}
+                to="/contact"
+                className="nav-link"
+                aria-current="page"
+              >
                 Contact
               </NavLink>
             </li>

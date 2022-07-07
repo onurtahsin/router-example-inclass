@@ -26,12 +26,13 @@ const Instructors = () => {
             <div
               className="col-sm-12 col-md-6 col-lg-4"
               key={id}
-
-              onClick={() => navigate(`/instructors/${id}`
+              //! rooting path bu ansolute yani mutlak path dir 
+              // onClick={() => navigate(`/instructors/${id}`
               
-              //! {inst}
-              )} 
-
+              // //! {inst}
+              // )} 
+              //?relative path yaparak uşlaşmak istersek bu şekilde yaparız bu yol daha kısadır ancak uzun linkler için hata yapma payı yüksektir
+              onClick = {()=> navigate(`${id}`,{state : inst})}
               //! bu şekilde sonuna inst eklediğimizde kullanıcı doğrudan adresi yazar tıklamazsa çalışmaz
               style = {{cursor:'pointer'}}
             >
