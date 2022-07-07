@@ -49,7 +49,9 @@ function App() {
             <Route path="" element={<Contact />} />
           </Route>
 
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<Navigate to="/" />} />
+          {/* hatalı bir root girdiğimizde bizi ana sayfaya atar ancak bu durum INSTRUCTOR için durum farklıdır not fount çalışır */}
         </Routes>
         <Footer />
       </BrowserRouter>
